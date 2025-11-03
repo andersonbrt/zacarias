@@ -1,147 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cardápios - Parque Aquático Zacarias</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápios - Parque Aquático Zacarias</title>
 
-<style>
-/* === RESET E BASE === */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-  overflow-x: hidden;
-}
+  <style>
+    /* === RESET E BASE === */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-/* === FUNDO COM GRADIENTE === */
-body {
-  background: linear-gradient(to bottom, #a8ffcb 0%, #009688 50%, #006e3a 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+    /* === FUNDO COM GRADIENTE === */
+    body {
+      background: linear-gradient(to bottom, #a8ffcb 0%, #009688 50%, #006e3a 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-/* === TOPO COM LOGO === */
-.header {
-  text-align: center;
-  padding: 40px 20px 20px;
-}
-.header img {
-  width: 200px;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
-}
+    /* === TOPO COM LOGO === */
+    .header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
 
-/* === TÍTULO === */
-.title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.3);
-  margin-top: 10px;
-}
+    .header img {
+      width: 200px;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    }
 
-/* === CONTAINER DE CARDS === */
-.cards-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 28px;
-  padding: 40px 20px;
-}
+    /* === TÍTULO === */
+    .title {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+      margin-top: 10px;
+    }
 
-/* === CARD (BOTÃO) === */
-.card {
-  background: linear-gradient(135deg, #FFD84D 0%, #FFC107 100%);
-  color: #004b2d;
-  width: 260px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 12px 20px;
-  border-radius: 16px;
-  text-decoration: none;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-}
+    /* === CONTAINER DE CARDS === */
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding: 40px 20px;
+    }
 
-/* Ícone dentro do card */
-.card img {
-  width: 46px;
-  height: 46px;
-  margin-right: 12px;
-}
+    /* === CARD (BOTÃO) === */
+    .card {
+      background: linear-gradient(135deg, #FFD84D 0%, #FFC107 100%);
+      color: #004b2d;
+      width: 260px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 12px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+    }
 
-/* === HOVER VERDE-AZUL LUMINOSO === */
-.card:hover {
-  background: linear-gradient(135deg, #00c2a0 0%, #007b55 100%);
-  color: #fffbea;
-  box-shadow: 0 0 16px rgba(0, 255, 204, 0.7);
-  transform: translateY(-4px);
-}
+    /* Ícone dentro do card */
+    .card img {
+      width: 46px;
+      height: 46px;
+      margin-right: 12px;
+    }
 
-/* === RODAPÉ === */
-.footer {
-  background: linear-gradient(135deg, #006e3a 0%, #004b2d 100%);
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-  color: #d2ffd2;
-}
-.footer a {
-  color: #FFEB3B;
-  text-decoration: none;
-  margin: 0 6px;
-  font-weight: 600;
-}
-.footer a:hover {
-  text-decoration: underline;
-}
+    /* === HOVER VERDE-AZUL LUMINOSO === */
+    .card:hover {
+      background: linear-gradient(135deg, #00c2a0 0%, #007b55 100%);
+      color: #fffbea;
+      box-shadow: 0 0 16px rgba(0, 255, 204, 0.7);
+      transform: translateY(-4px);
+    }
 
-/* === RESPONSIVIDADE === */
-@media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-  }
-  .card {
-    width: 90%;
-  }
-}
-</style>
+    /* === RODAPÉ === */
+    .footer {
+      background: linear-gradient(135deg, #006e3a 0%, #004b2d 100%);
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      color: #d2ffd2;
+    }
+
+    .footer a {
+      color: #FFEB3B;
+      text-decoration: none;
+      margin: 0 6px;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* === RESPONSIVIDADE === */
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- TOPO -->
   <div class="header">
-    <img src="assets/images/logo-zacarias.webp" alt="Logo Zacarias">
+    <img src="assets/images/logo-zacarias.png" alt="Logo Zacarias">
   </div>
 
-  <h2 class="title">Nossos Cardápios
-  </h2>
+  <h2 class="title">Nossos Cardápios</h2>
 
   <!-- CARDS -->
   <div class="cards-container">
     <a href="menu/zacs-cafe.pdf" class="card">
-      <img src="3b0b77d1-82ae-4716-a929-807fc6e65f18.png" alt="Café">
+      <img src="assets/images/logo-cafe.png" alt="Zac's Café">
       Zac’s Café
     </a>
 
     <a href="menu/zacs-burger.pdf" class="card">
-      <img src="80d619db-36f0-462e-8309-d236fdc1aa25.png" alt="Burger">
+      <img src="assets/images/logo-burger.png" alt="Zac's Burger">
       Zac’s Burger
     </a>
 
     <a href="menu/zacs-lanchonete.pdf" class="card">
-      <img src="971148a7-0280-48e1-a8b2-9876fb0a4659.png" alt="Lanchonete">
+      <img src="assets/images/logo-lanchonete.png" alt="Zac's Lanchonete">
       Zac’s Lanchonete
+    </a>
+
+    <a href="menu/zacs-pizza-hot-dog.pdf" class="card">
+      <img src="assets/images/logo-pizza.png" alt="Zac's Pizza & Hot-Dog">
+      Zac’s Pizza & Hot-Dog
+    </a>
+
+    <a href="menu/zacs-crepe-e-churros.pdf" class="card">
+      <img src="assets/images/logo-crepe.png" alt="Zac's Crepe & Churros">
+      Zac’s Crepe & Churros
+    </a>
+
+    <a href="menu/zacs-restaurante.pdf" class="card">
+      <img src="assets/images/logo-restaurante.png" alt="Zac's Restaurante">
+      Zac’s Restaurante
+    </a>
+
+    <a href="menu/zacs-bar-molhado.pdf" class="card">
+      <img src="assets/images/logo-bar.png" alt="Zac's Bar Molhado">
+      Zac’s Bar Molhado
     </a>
   </div>
 
@@ -153,4 +178,5 @@ body {
   </footer>
 
 </body>
+
 </html>
